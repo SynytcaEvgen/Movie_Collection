@@ -1,0 +1,34 @@
+body {
+  box-sizing: border-box;
+  margin: 50px auto;
+  max-width: 1920px;
+}
+ul {
+  list-style-type: none;
+}
+.accent-color {
+  color: #3366ff;
+}
+.logo {
+  width: 229px;
+  height: 110px;
+}
+.head {
+  max-width: 1500px;
+  margin: 0px auto;
+}
+.social-net {
+  display: flex;
+  justify-content: space-between;
+}
+.social-net-icon {
+  width: 24px;
+  height: 24px;
+}
+.menu-main {
+  display: flex;
+  justify-content: space-between;
+}
+.menu-link {
+  display: flex;
+}
