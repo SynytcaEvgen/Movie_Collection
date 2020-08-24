@@ -33,7 +33,7 @@ window.addEventListener('DOMContentLoaded', function() {
     // init API request function
     RequestResult = function(movie, quantity) {
       var client = new HttpClient();
-        client.get('http://www.omdbapi.com/?apikey=aca90435&page=' + quantity + '&s=' + encodeURI(movie), function(response) {
+        client.get('https://www.omdbapi.com/?apikey=aca90435&page=' + quantity + '&s=' + encodeURI(movie), function(response) {
         //console.log(response);
         var objMovie = JSON.parse(response);
         CounterBuild(objMovie);
