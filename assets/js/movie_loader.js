@@ -41,7 +41,7 @@ window.addEventListener('DOMContentLoaded', function() {
     };  
     // Make a movie card in HTML
     function CounterBuild(count){
-
+       
         contentBox.innerHTML = '';
     
         if (count.Response === 'False'){
@@ -112,23 +112,24 @@ window.addEventListener('DOMContentLoaded', function() {
     };
     // Push movie request to server
     function SearchMovie (event) {
+        event.preventDefault();
         if (event.type === 'keyup') {
             taskMessage = event.target.value;
         }
-        event.preventDefault();
         if (event.keyCode === 13 && event.type === 'keyup' && taskMessage.trim() || event.type === 'click' && taskMessage.trim()) {    
             quantity = 1;
             allPage = 0,
             itemPage = 0;
             upCall = 1;
             RequestResult(taskMessage,quantity);
-            searchRequest.value = '';
+            searchRequest.value = '';  
         }
     }
     //Event for movie request
     function Events () {
         searchRequest.addEventListener('keyup', SearchMovie);
-        sendBtn.addEventListener('click',SearchMovie);   
+        sendBtn.addEventListener('click',SearchMovie);  
+     
     }
     // Pagination maker 
     function PaginationMover(element){
@@ -140,7 +141,7 @@ window.addEventListener('DOMContentLoaded', function() {
                   RequestResult(taskMessage,quantity);
                 } else {return};
             } if (element.target.classList.contains('prev')) {
-                
+             
                 if (quantity <=1){
                     quantity = 1;  
                    RequestResult(taskMessage,quantity);
