@@ -118,7 +118,6 @@ window.addEventListener('DOMContentLoaded', function() {
             taskMessage = event.target.value;
         }
         if (event.keyCode === 13 && event.type === 'keyup' && taskMessage.trim() || event.type === 'click' && taskMessage.trim()) {   
-            
             quantity = 1;
             allPage = 0,
             itemPage = 0;
@@ -130,8 +129,7 @@ window.addEventListener('DOMContentLoaded', function() {
     //Event for movie request
     function Events () {
         searchRequest.addEventListener('keyup', SearchMovie);
-        sendBtn.addEventListener('click',SearchMovie);
-        
+        sendBtn.addEventListener('click',SearchMovie);   
     }
     // Pagination maker 
     function PaginationMover(element){
