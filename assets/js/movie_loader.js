@@ -123,6 +123,7 @@ window.addEventListener('DOMContentLoaded', function() {
             quantity = 1;
             allPage = 0,
             itemPage = 0;
+            upCall = 1;
             RequestResult(taskMessage,quantity);
             searchRequest.value = '';
         }
