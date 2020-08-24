@@ -8,12 +8,8 @@
     .copyright-rule {
         margin: 0 10%
     } 
-    
-
 }
-
 @media only screen and (max-width: 1300px) {
-   
     .header {
         width: 100%;
         left: 0;
@@ -24,9 +20,7 @@
       .pagination-wrapper,
       .copyright-rule {
         margin: 0 3%;
-    }
-    
-      
+    } 
 }
 @media only screen and (max-width: 1200px) {
       .content-head ,
@@ -41,7 +35,6 @@
         justify-content: space-between;
         flex-wrap: wrap;
     }
-    
 
 }
 @media only screen and (max-width: 1025px) {
@@ -61,8 +54,6 @@
 
 }
 @media only screen and (max-width: 815px) {
-
-
     .footer-wrapper {
         flex-direction: column;
         margin: 0px 100px;
@@ -83,7 +74,6 @@
       }
 }
 @media only screen and (max-width: 740px) {
-
     .header {
         flex-wrap: wrap;
         justify-content: center;
@@ -96,19 +86,14 @@
     .nav-bar {
         margin-bottom: 15px;
     } 
-
 }
 @media only screen and (max-width: 680px) {
-
     .content-head {
-
         flex-direction: column;
-
     }
     .content-finder {
         margin-left: 0px;
       }
-
 }
 @media only screen and (max-width: 530px) {
     .slider-content-banner {
@@ -136,17 +121,13 @@
     .menu-link {
         margin: 5px 20px;
       }
-
 }
-
 @media only screen and (max-width: 450px) {
     .menu-link {
         margin: 5px 15px;
     }
-    
     .footer-wrapper {
         margin: 0px 10px;
-    
     }
     .pagination-wrapper {
         margin: auto 2%;
@@ -155,7 +136,6 @@
         flex-wrap: wrap;
       }
 }
-
 @media only screen and (max-width: 380px) {
     .menu-link {
         margin: 5px 13px;

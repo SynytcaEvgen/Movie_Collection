@@ -15,7 +15,6 @@ window.addEventListener('DOMContentLoaded', function() {
     itemsPerPage = 10,
     upCall = 1;
 
-
     //API request function
     var HttpClient = function() {
         this.get = function(aUrl, aCallback) {
@@ -97,7 +96,6 @@ window.addEventListener('DOMContentLoaded', function() {
             movieYearWrap.classList.add('movie-year');
             let movieYear =  document.createElement('h5');
             movieYear.innerHTML = count.Search[i].Year;
-
             
             movieTypeWrap.appendChild(movieType);
             movieYearWrap.appendChild(movieYear);
@@ -162,7 +160,6 @@ window.addEventListener('DOMContentLoaded', function() {
         });
         
     };
-    
         
     Events();
     EventsClickArrow(); 
