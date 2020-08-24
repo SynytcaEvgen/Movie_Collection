@@ -112,11 +112,11 @@ window.addEventListener('DOMContentLoaded', function() {
     };
     // Push movie request to server
     function SearchMovie (event) {
-        event.preventDefault();
         if (event.type === 'keyup') {
             taskMessage = event.target.value;
         }
-        if (event.keyCode === 13 && event.type === 'keyup' && taskMessage.trim() || event.type === 'click' && taskMessage.trim()) {   
+        event.preventDefault();
+        if (event.keyCode === 13 && event.type === 'keyup' && taskMessage.trim() || event.type === 'click' && taskMessage.trim()) {    
             quantity = 1;
             allPage = 0,
             itemPage = 0;
@@ -132,7 +132,7 @@ window.addEventListener('DOMContentLoaded', function() {
     }
     // Pagination maker 
     function PaginationMover(element){
-        element.preventDefault();
+          element.preventDefault();
             if (element.target.classList.contains('next')){
                 if (Math.ceil(allPage/itemsPerPage) > quantity ){
                   quantity++;
@@ -155,7 +155,7 @@ window.addEventListener('DOMContentLoaded', function() {
     // Event to clic arrow pagination
     function EventsClickArrow () {
         paginationControl.forEach(function (item) {
-          item.addEventListener('click', PaginationMover);
+          item.addEventListener('click', PaginationMover);   
         });
         
     };
