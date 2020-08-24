@@ -109,7 +109,6 @@ window.addEventListener('DOMContentLoaded', function() {
             contentBox.appendChild(contentItem);
         };
         };
-
     };
     // Push movie request to server
     function SearchMovie (event) {
