@@ -117,7 +117,8 @@ window.addEventListener('DOMContentLoaded', function() {
         if (event.type === 'keyup') {
             taskMessage = event.target.value;
         }
-        if (event.keyCode === 13 && event.type === 'keyup' && taskMessage.trim() || event.type === 'click' && taskMessage.trim()) {
+        if (event.keyCode === 13 && event.type === 'keyup' && taskMessage.trim() || event.type === 'click' && taskMessage.trim()) {   
+            
             quantity = 1;
             allPage = 0,
             itemPage = 0;
@@ -130,17 +131,18 @@ window.addEventListener('DOMContentLoaded', function() {
     function Events () {
         searchRequest.addEventListener('keyup', SearchMovie);
         sendBtn.addEventListener('click',SearchMovie);
+        
     }
     // Pagination maker 
-    function PaginationMover(event){
-        event.preventDefault();
-            if (event.target.classList.contains('next')){
+    function PaginationMover(element){
+        element.preventDefault();
+            if (element.target.classList.contains('next')){
                 if (Math.ceil(allPage/itemsPerPage) > quantity ){
                   quantity++;
                   upCall = upCall + itemsPerPage;
                   RequestResult(taskMessage,quantity);
                 } else {return};
-            } if (event.target.classList.contains('prev')) {
+            } if (element.target.classList.contains('prev')) {
                 
                 if (quantity <=1){
                     quantity = 1;  

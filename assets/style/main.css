@@ -117,8 +117,7 @@ h5 {
 }
 .slider-item {
   position: relative;
-  /*flex: 0 0 100%;*/
-  width: 100%;
+  flex: 0 0 100%;
 }
 .slider-content-img {
   max-height: 520px;
@@ -189,10 +188,9 @@ h5 {
 .input-wrap {
   position: relative;
   margin-top: 20px;
-  outline: none;
 }
-.text,
-.button :active, :hover, :focus {
+.finde-line,
+.btn--submit :active, :hover, :focus {
   outline: 0;
   outline-offset: 0;
 } 
