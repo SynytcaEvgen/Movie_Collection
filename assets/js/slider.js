@@ -46,7 +46,7 @@ window.addEventListener('DOMContentLoaded', function() {
           }
   
           var TransformItem = function (direction) {
-            if (direction === 'right') {
+            if (direction === 'left') {
                 positionLeftItem++;
               if ((positionLeftItem + wrapperWidth / itemWidth - 1) >= position.getMax()) {
                 nextItem = position.getItemMin();
@@ -56,7 +56,7 @@ window.addEventListener('DOMContentLoaded', function() {
             }
               transform -= step;
             }
-            if (direction === 'left') {
+            if (direction === 'right') {
               positionLeftItem--;
               if (positionLeftItem <= position.getMin()) {
                 nextItem = position.getItemMax();
