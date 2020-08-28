@@ -14,6 +14,7 @@ window.addEventListener('DOMContentLoaded', function() {
     itemPage = 0,
     itemsPerPage = 10,
     upCall = 1;
+    cheackValue = "You stupid man"
 
     //API request function
     var HttpClient = function() {
@@ -33,14 +34,13 @@ window.addEventListener('DOMContentLoaded', function() {
     RequestResult = function(movie, quantity) {
       var client = new HttpClient();
         client.get('https://www.omdbapi.com/?apikey=aca90435&page=' + quantity + '&s=' + encodeURI(movie), function(response) {
-        //console.log(response);
         var objMovie = JSON.parse(response);
         CounterBuild(objMovie);
         
       });
     };  
     // Make a movie card in HTML
-    function CounterBuild(count){
+    function CounterBuild(count) {
        
         contentBox.innerHTML = '';
     
@@ -66,7 +66,7 @@ window.addEventListener('DOMContentLoaded', function() {
             pageInLow.innerHTML = upCall;
             pageInHi.innerHTML = upCall + count.Search.length - 1;
              
-        for (let i = 0; i <= count.Search.length; i++){
+        for (let i = 0; i < count.Search.length; i++){
 
 
             let contentItem = document.createElement('div');
@@ -74,8 +74,11 @@ window.addEventListener('DOMContentLoaded', function() {
 
             let imgPoster = document.createElement('img');
             imgPoster.classList.add('img-pos');
+        
             if (count.Search[i].Poster !== 'N/A'){
-                imgPoster.src = count.Search[i].Poster;
+               
+               imgPoster.src = count.Search[i].Poster;
+                
             } else {
                 imgPoster.src ='./assets/Image/Image/image-not-found.png'
             } 
